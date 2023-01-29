@@ -17,6 +17,8 @@ or visit [Plenty DeFi](https://plentydefi.com/).
 
 # Project setup
 
+OS: Ubuntu 20.04
+
 To install the dependencies:
 
 ```
