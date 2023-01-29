@@ -1,0 +1,127 @@
+@use '../../../assets/scss/constants' as const;
+
+.btn {
+  min-width: 112px;
+  height: 54px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+
+  & > span {
+    margin: auto 0;
+  }
+
+  &:active {
+    transform: scale(0.98);
+    transform-origin: 50% 50%;
+  }
+
+  &[disabled] {
+    background: var(--theme-disabled-button-bg);
+    color: var(--theme-disabled-button-text);
+    transform: none;
+  }
+}
+
+.quantityBtn {
+  @extend .btn;
+  min-width: 50px;
+}
+
+.iconBtn {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  background: #f4f4f6;
+  border: 0;
+  padding: 0;
+
+  &.roundIconBtn {
+    border-radius: 50%;
+  }
+
+  &.squareIconBtn {
+    border-radius: 6px;
+  }
+
+  &.largeIconBtn {
+    height: 34px;
+    width: 34px;
+    & > span {
+      font-size: 26px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.primary {
+  color: var(--theme-primary-button-text);
+  background: var(--theme-primary-button-bg);
+  border: 0;
+  font-weight: bold;
+}
+.primaryOutline {
+  color: var(--theme-primary-button-bg);
+  background: transparent;
+  border: 1px solid var(--theme-primary-button-bg);
+  font-weight: bold;
+}
+
+.secondary {
+  background: var(--theme-secondary-1);
+  color: var(--theme-primary-gradient-1);
+  border: 0;
+}
+.disabled {
+  background: var(--theme-disabled-button);
+  color: var(--theme-disable-button-text);
+  border: 0;
+  font-weight: 500;
+}
+.outline-button {
+  border: 0.2px solid var(--theme-confirm-transaction-border);
+  background: rgba(78, 93, 120, 0.02);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--theme-confirm-transaction-button-text);
+}
+
+.smallBtn {
+  height: 26px;
+  min-width: inherit;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 14px;
+
+  & :global(.material-icons-round) {
+    font-size: 16px;
+  }
+}
+
+.mute {
+  border: 0;
+  color: var(--theme-text-1);
+  background: var(--theme-expand-button-bg);
+}
+
+.tertiary {
+  color: #823de0;
+  background-color: #ffffff;
+  border: 0;
+  font-weight: bold;
+}
+
+.default {
+  color: var(--theme-plenty-badge-text);
+  border: solid 1px var(--theme-plenty-badge-text);
+  background: transparent;
+
+  &[disabled] {
+    background: var(--theme-bg-4);
+    border-color: #8a94a6;
+    color: #8a94a6;
+    transform: none;
+  }
+}

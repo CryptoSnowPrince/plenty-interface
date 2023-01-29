@@ -1,0 +1,14 @@
+.inputWrapper {
+  display: flex;
+  background: #f4f4f6;
+  border-radius: 6px;
+
+  & input {
+    margin: auto 12px;
+    outline: none;
+    background: transparent;
+    border: 0;
+    text-align: right;
+    width: inherit;
+  }
+}

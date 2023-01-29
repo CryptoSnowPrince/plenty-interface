@@ -1,0 +1,117 @@
+.tokens {
+  width: calc(100vw - 32px);
+  max-width: 1200px;
+  background: var(--theme-card-bg);
+  border-radius: 10px;
+  padding: 36px 0;
+
+  &.summary {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px auto 36px;
+    padding: 24px;
+    min-height: 100px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+
+      * > div {
+        margin: 6px auto;
+      }
+    }
+
+    .summaryName {
+      font-size: 1.25rem;
+    }
+
+    .summaryChange {
+      font-size: 0.9rem;
+    }
+  }
+
+  &.liquidityTable {
+    margin: 0 auto 36px;
+  }
+
+  &.tokensTable {
+    margin: 140px auto 36px;
+  }
+
+  .searchBar {
+    max-width: 140px;
+    font-size: 14px;
+
+    & input {
+      background: var(--theme-input-bg);
+      color: var(--theme-text-1);
+    }
+  }
+
+  .tradeBtn {
+    height: 36px;
+    text-decoration: none !important;
+  }
+
+  .favoriteIcon {
+    cursor: pointer;
+    margin: auto 20px auto 44px;
+
+    &:global(.selected) {
+      fill: url(#favorite-token-fill);
+    }
+  }
+}
+
+.redText {
+  color: #ff7a68;
+}
+
+.greenText {
+  color: #4fbf67;
+}
+
+.searchIcon {
+  background: var(--theme-input-bg);
+  color: #c4c3c3;
+}
+
+.searchBox {
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+
+  background: var(--theme-input-bg);
+  color: var(--theme-text-1);
+
+  &:focus {
+    background: var(--theme-input-bg);
+    color: var(--theme-text-1);
+    border: 1px solid #ced4da;
+  }
+  &::placeholder {
+    color: #c4c3c3;
+    opacity: 1;
+  }
+}
+
+.iconInside {
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 14px);
+  pointer-events: none;
+  color: #c4c3c3;
+  z-index: 3;
+}
+
+.placeholder {
+  &::placeholder {
+    color: #c4c3c3;
+    opacity: 1;
+  }
+}
